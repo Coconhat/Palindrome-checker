@@ -1,0 +1,103 @@
+/* Basic reset and styling */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f4f8;
+}
+
+.title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.check {
+    font-size: 1rem;
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    width: 300px;
+    margin-bottom: 20px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.check:focus {
+    border-color: #007BFF;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.25);
+    outline: none;
+}
+
+.button {
+    font-size: 1rem;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    background-color: #007BFF;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+.button:active {
+    transform: scale(0.98);
+}
+
+.alert {
+    font-size: 1rem;
+    margin-top: 20px;
+    color: #333;
+}
+
+/* Styles for the question mark button */
+.question {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 1.5rem;
+    width: 50px; /* Fixed width for square shape */
+    height: 50px; /* Fixed height for square shape */
+    border: none;
+    border-radius: 8px; /* Rounded corners */
+    color: white;
+    background-color: #007BFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.question:hover {
+    background-color: #0056b3;
+    transform: scale(1.1);
+}
+
+/* Tooltip styling */
+.tooltip {
+    position: absolute;
+    bottom: 70px; /* Position above the button */
+    right: 20px;  /* Align with the button */
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    white-space: normal; /* Allow text to wrap */
+    max-width: 200px; /* Limit the width of the tooltip */
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none; /* Prevents tooltip from interfering with button hover */
+}
+
+.question:hover + .tooltip {
+    opacity: 1;
+}
