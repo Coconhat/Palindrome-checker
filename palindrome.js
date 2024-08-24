@@ -1,5 +1,5 @@
 import { reverseCurseTechnique } from "./reverseword.js";
-
+//
 function check(){
     let value = document.querySelector('.check').value;
 
