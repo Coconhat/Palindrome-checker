@@ -1,9 +1,9 @@
-import { reverseCurseTechnique } from "./reverseword.js";
-//
+import { reverse } from "./reverseword.js";
+
 function check(){
     let value = document.querySelector('.check').value;
 
-    let reverseValue = reverseCurseTechnique(value);
+    let reverseValue = reverse(value);
 
     if (value === reverseValue){
         document.querySelector('.alert').innerHTML = `${value} is a palimdrome!`
